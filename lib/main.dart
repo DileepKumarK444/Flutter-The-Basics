@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/locator.dart';
 import 'package:the_basics/views/home/home_view.dart';
+import 'package:the_basics/views/layout_template/layout_template.dart';
 // import 'package:the_basics/views/home/home_view.dart';
 
 void main() {
+  setupLocator();
   runApp(const MyApp());
 }
 
@@ -18,6 +21,6 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             textTheme:
                 Theme.of(context).textTheme.apply(fontFamily: 'Open Sans')),
-        home: HomeView());
+        home: LayoutTemplate());
   }
 }
